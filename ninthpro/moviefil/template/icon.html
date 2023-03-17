@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% block body %}
+<body style="background-color: darkgreen;">
+<div class="container">
+    <div class="row">
+        <div class="call-md-6">
+            <img src="{{ee.image.url}}" style="height:300px; width:200px; padding-top:6%">
+        </div>
+        <div class="col-md-6">
+{{ee.name}}<br>
+{{ee.description}}<br>
+{{ee.year}}<br>
+        </div>
+    </div>
+</div>
+<a class="btn btn-dark" href="{% url 'movie:update' ee.id %}">
+    Update
+</a>
+<a class="btn btn-danger" href="{% url 'movie:delete' ee.id %}"> enne onnu delete aaku</a>
+{% endblock %}
